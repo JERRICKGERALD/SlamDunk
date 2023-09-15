@@ -61,7 +61,7 @@ my_dict = {'Market_Val':'Value ($M)', 'Current_Sal':'Salary ($M)', 'MP':'MPG'}
 datanice = datanice.rename(columns=my_dict)
 
 
-st.sidebar.markdown(" # Your Favorite Player from Team: (Mine is Forever Mamba)")
+st.sidebar.markdown(" # Select Your Team & Player: (Mine is Forever Mamba & Bulls)")
 image_url = "https://c4.wallpaperflare.com/wallpaper/402/588/984/kobe-bryant-nba-los-angeles-lakers-basketball-hd-wallpaper-preview.jpg"  # Replace with the URL of your image
 
 
@@ -77,8 +77,8 @@ salary = data.loc[player].Current_Sal.round(1)
 market_value = data.loc[player].Market_Val.round(1)
 
 st.write(f'''
-         ##### This year, <span style="color:orange">{player}</span> is earning a salary of <span style="color:orange"> ${salary}M </span>
-          ##### The model result, his market value is <span style="color:orange">${market_value}M</span>
+         ##### The current year, <span style="color:orange">{player}</span>,his market value is <span style="color:orange"> ${salary}M </span>
+          ##### The model result's market value is <span style="color:orange">${market_value}M</span>
          ''', unsafe_allow_html=True)
 
 st.write('---')
